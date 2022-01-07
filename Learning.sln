@@ -5,7 +5,9 @@ VisualStudioVersion = 17.0.32014.148
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Calculator", "Calculator\Calculator.csproj", "{3AA8552F-12ED-4113-B9A0-0A991A9BB7CF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Terminal", "Terminal\Terminal.csproj", "{8D1F88DD-AB7B-4100-8582-5C391DF3EC12}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Terminal", "Terminal\Terminal.csproj", "{8D1F88DD-AB7B-4100-8582-5C391DF3EC12}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Game", "Game\Game.csproj", "{7CE13924-3D6F-477C-BB00-24E96BCCE8BD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{8D1F88DD-AB7B-4100-8582-5C391DF3EC12}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8D1F88DD-AB7B-4100-8582-5C391DF3EC12}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8D1F88DD-AB7B-4100-8582-5C391DF3EC12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7CE13924-3D6F-477C-BB00-24E96BCCE8BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CE13924-3D6F-477C-BB00-24E96BCCE8BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CE13924-3D6F-477C-BB00-24E96BCCE8BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CE13924-3D6F-477C-BB00-24E96BCCE8BD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
