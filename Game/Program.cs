@@ -1,10 +1,10 @@
 ﻿// See https://aka.ms/new-console-template for more information
 Console.WriteLine("The dice is cast!");
-Console.WriteLine("Guess the number from 2 to 12.");
+Console.WriteLine("Guess the number from 1 to 2.");
 
 Random random = new Random();
 
-int diceNumber = random.Next(2, 13);
+int diceNumber = random.Next(1, 3);
 string? input = null;
 int attempt = 0;
 int inputNum = 0;
@@ -19,8 +19,8 @@ while (true)
 
     if (result)
     {
-        if (inputNum < 2 || inputNum > 12)
-            Console.WriteLine("Your input '" + input + "' is not 2...12 Integer!");
+        if (inputNum < 1 || inputNum > 2)
+            Console.WriteLine("Your input '" + input + "' is not 1...2 Integer!");
         else if (diceNumber != inputNum)
             Console.WriteLine("Your input '" + input + "' is not correct dice number!");
         else
