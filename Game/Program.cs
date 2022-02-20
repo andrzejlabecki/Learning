@@ -1,5 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("The dice is cast!");
+Console.WriteLine("The die has been cast!");
 Console.WriteLine("Guess the number from 1 to 6.");
 
 Random random = new Random();
