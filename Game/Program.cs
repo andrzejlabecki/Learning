@@ -1,10 +1,10 @@
 ﻿// See https://aka.ms/new-console-template for more information
 Console.WriteLine("The dice is cast!");
-Console.WriteLine("Guess the number from 1 to 2.");
+Console.WriteLine("Guess the number from 1 to 7.");
 
 Random random = new Random();
 
-int diceNumber = random.Next(1, 3);
+int diceNumber = random.Next(1, 7);
 string? input = null;
 int attempt = 0;
 int inputNum = 0;
