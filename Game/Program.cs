@@ -1,6 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 Console.WriteLine("The dice is cast!");
-Console.WriteLine("Guess the number from 1 to 7.");
+Console.WriteLine("Guess the number from 1 to 6.");
 
 Random random = new Random();
 
@@ -19,7 +19,7 @@ while (true)
 
     if (result)
     {
-        if (inputNum < 1 || inputNum > 2)
+        if (inputNum < 1 || inputNum > 7)
             Console.WriteLine("Your input '" + input + "' is not 1...2 Integer!");
         else if (diceNumber != inputNum)
             Console.WriteLine("Your input '" + input + "' is not correct dice number!");
