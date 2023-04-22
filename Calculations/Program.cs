@@ -1,4 +1,7 @@
 ﻿
+using System;
+using System.Reflection.Metadata;
+
 namespace Calculations
 {
     internal class Program
@@ -12,8 +15,33 @@ namespace Calculations
             // '/' divide
             // 'Math.Pow(x, y)' y power of x
 
-            Test1();
-            Test2();
+            //Test1();
+            //Test2();
+
+            // pi calculation by using the Leibniz formula
+            // pi/4 = 1 - 1/3 + 1/5 - 1/7 + 1/9 - 1/11 + ...
+
+            // pi with first 50 digits
+            string strPi = "3.14159265358979323846264338327950288419716939937510";
+            Console.WriteLine(strPi);
+
+            int numTerms = 1000000000;
+            //long numTerms = 2000000000;
+
+            DateTime start = DateTime.Now;
+            double pi = CalculatePi(numTerms);
+            //decimal pi = CalculatePiEx(numTerms);
+            DateTime end = DateTime.Now;
+
+            double seconds = (end - start).TotalSeconds;
+
+            strPi = pi.ToString();
+
+            Console.WriteLine(strPi);
+
+            int digits = strPi.Length - 2;
+            Console.WriteLine(digits.ToString() + " - digits");
+            Console.WriteLine(seconds.ToString() + " - seconds");
         }
 
         static void Test1()
@@ -56,6 +84,44 @@ namespace Calculations
             Console.WriteLine("Test = " + test);
             Console.WriteLine("Press any button to exit...");
             Console.ReadKey();
+        }
+
+        public static double CalculatePi(int numTerms)
+        {
+            double pi = 0.0;
+            bool positive = true;
+            for (int i = 1; i <= numTerms; i += 2)
+            {
+                if (positive)
+                {
+                    pi += 1.0 / i;
+                }
+                else
+                {
+                    pi -= 1.0 / i;
+                }
+                positive = !positive;
+            }
+            return 4.0 * pi;
+        }
+
+        public static decimal CalculatePiEx(long numTerms)
+        {
+            decimal pi = (decimal)0.0;
+            bool positive = true;
+            for (long i = 1; i <= numTerms; i += 2)
+            {
+                if (positive)
+                {
+                    pi += (decimal)1.0/i;
+                }
+                else
+                {
+                    pi -= (decimal)1.0/i;
+                }
+                positive = !positive;
+            }
+            return (decimal)4.0*pi;
         }
     }
 }
