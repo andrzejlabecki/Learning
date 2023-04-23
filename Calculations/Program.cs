@@ -25,12 +25,13 @@ namespace Calculations
             string strPi = "3.14159265358979323846264338327950288419716939937510";
             Console.WriteLine(strPi);
 
-            int numTerms = 1000000000;
-            //long numTerms = 2000000000;
+            int numTerms = 100;
+            //long numTerms = 1000000000;
 
             DateTime start = DateTime.Now;
-            double pi = CalculatePi(numTerms);
-            //decimal pi = CalculatePiEx(numTerms);
+            double pi = CalculatePiInt(numTerms);
+            //double pi = CalculatePiLong(numTerms);
+            //decimal pi = CalculatePiDecimal(numTerms);
             DateTime end = DateTime.Now;
 
             double seconds = (end - start).TotalSeconds;
@@ -42,6 +43,10 @@ namespace Calculations
             int digits = strPi.Length - 2;
             Console.WriteLine(digits.ToString() + " - digits");
             Console.WriteLine(seconds.ToString() + " - seconds");
+
+            Console.WriteLine("Press any key to exit... ");
+
+            Console.ReadKey();
         }
 
         static void Test1()
@@ -86,7 +91,7 @@ namespace Calculations
             Console.ReadKey();
         }
 
-        public static double CalculatePi(int numTerms)
+        public static double CalculatePiInt(int numTerms)
         {
             double pi = 0.0;
             bool positive = true;
@@ -105,7 +110,26 @@ namespace Calculations
             return 4.0 * pi;
         }
 
-        public static decimal CalculatePiEx(long numTerms)
+        public static double CalculatePiLong(long numTerms)
+        {
+            double pi = 0.0;
+            bool positive = true;
+            for (long i = 1; i <= numTerms; i += 2)
+            {
+                if (positive)
+                {
+                    pi += 1.0 / i;
+                }
+                else
+                {
+                    pi -= 1.0 / i;
+                }
+                positive = !positive;
+            }
+            return 4.0 * pi;
+        }
+
+        public static decimal CalculatePiDecimal(long numTerms)
         {
             decimal pi = (decimal)0.0;
             bool positive = true;
