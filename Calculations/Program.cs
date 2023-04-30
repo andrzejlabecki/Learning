@@ -25,13 +25,13 @@ namespace Calculations
             string strPi = "3.14159265358979323846264338327950288419716939937510";
             Console.WriteLine(strPi);
 
-            int numTerms = 100;
-            //long numTerms = 1000000000;
+            //int numTerms = 100;
+            long numTerms = 1000000000;
 
             DateTime start = DateTime.Now;
-            double pi = CalculatePiInt(numTerms);
+            //double pi = CalculatePiInt(numTerms);
             //double pi = CalculatePiLong(numTerms);
-            //decimal pi = CalculatePiDecimal(numTerms);
+            decimal pi = CalculatePiDecimal(numTerms);
             DateTime end = DateTime.Now;
 
             double seconds = (end - start).TotalSeconds;
