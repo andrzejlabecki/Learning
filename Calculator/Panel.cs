@@ -98,7 +98,7 @@ namespace Calculator
 
         private void buttonEqual_Click(object sender, EventArgs e)
         {
-            //char [] delimeters = new char[] { '+', '-' };
+            // char [] delimeters = new char[] { '+', '-' };
             //string[] operands = textBoxInput.Text.Split(delimeters);
             string[] operands = textBoxInput.Text.Split(operation);
 
