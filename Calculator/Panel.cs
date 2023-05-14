@@ -95,13 +95,8 @@ namespace Calculator
             textBoxInput.Text += "-";
             isDot = false;
         }
-        private void buttonDevided_Click(object sender, EventArgs e)
-        {
-            operation = "/";
-            textBoxInput.Text += "/";
-            isDot = false;
-        }
-        private void ButtonMulti_Click(object sender, EventArgs e)
+
+        private void buttonMultiply_Click(object sender, EventArgs e)
         {
             operation = "*";
             textBoxInput.Text += "*";
@@ -116,7 +111,7 @@ namespace Calculator
 
             int count = operands.Length;
 
-            if (count != 2) 
+            if (count != 2)
             {
                 MessageBox.Show("You must enter 2 operands!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -149,6 +144,11 @@ namespace Calculator
             textBoxResult.Text = string.Empty;
         }
 
-      
+        private void buttonDivide_Click(object sender, EventArgs e)
+        {
+            operation = "/";
+            textBoxInput.Text += "/";
+            isDot = false;
+        }
     }
 }
