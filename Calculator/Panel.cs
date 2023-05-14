@@ -95,6 +95,18 @@ namespace Calculator
             textBoxInput.Text += "-";
             isDot = false;
         }
+        private void buttonDevided_Click(object sender, EventArgs e)
+        {
+            operation = "/";
+            textBoxInput.Text += "/";
+            isDot = false;
+        }
+        private void ButtonMulti_Click(object sender, EventArgs e)
+        {
+            operation = "*";
+            textBoxInput.Text += "*";
+            isDot = false;
+        }
 
         private void buttonEqual_Click(object sender, EventArgs e)
         {
@@ -118,6 +130,10 @@ namespace Calculator
                 result = operand1 + operand2;
             else if (operation == "-")
                 result = operand1 - operand2;
+            else if (operation == "*")
+                result = operand1 * operand2;
+            else if (operation == "/")
+                result = operand1 / operand2;
 
             if (result != null)
                 textBoxResult.Text = result.ToString();
@@ -133,9 +149,6 @@ namespace Calculator
             textBoxResult.Text = string.Empty;
         }
 
-        private void buttonMultiply_Click(object sender, EventArgs e)
-        {
-
-        }
+      
     }
 }
