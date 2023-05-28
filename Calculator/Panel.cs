@@ -95,12 +95,16 @@ namespace Calculator
             textBoxInput.Text += "-";
             isDot = false;
         }
+<<<<<<< HEAD
         private void buttonDivide_Click(object sender, EventArgs e)
         {
             operation = "/";
             textBoxInput.Text += "/";
             isDot = false;
         }
+=======
+
+>>>>>>> fe031120ee42324235880749141404008c89b783
         private void buttonMultiply_Click(object sender, EventArgs e)
         {
             operation = "*";
@@ -116,7 +120,7 @@ namespace Calculator
 
             int count = operands.Length;
 
-            if (count != 2) 
+            if (count != 2)
             {
                 MessageBox.Show("You must enter 2 operands!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -149,6 +153,11 @@ namespace Calculator
             textBoxResult.Text = string.Empty;
         }
 
-      
+        private void buttonDivide_Click(object sender, EventArgs e)
+        {
+            operation = "/";
+            textBoxInput.Text += "/";
+            isDot = false;
+        }
     }
 }

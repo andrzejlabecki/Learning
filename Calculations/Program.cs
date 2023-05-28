@@ -15,57 +15,53 @@ namespace Calculations
             // '/' divide
             // 'Math.Pow(x, y)' y power of x
 
-            //Test1();
-            //Test2();
+            Test1();
+            Test2();
 
             // pi calculation by using the Leibniz formula
             // pi/4 = 1 - 1/3 + 1/5 - 1/7 + 1/9 - 1/11 + ...
 
             // pi with first 50 digits
-            string strPi = "3.14159265358979323846264338327950288419716939937510";
-            Console.WriteLine(strPi);
+            //string strPi = "3.14159265358979323846264338327950288419716939937510";
+            //Console.WriteLine(strPi);
 
             //int numTerms = 100;
-            long numTerms = 1000000000;
+            //long numTerms = 1000000000;
 
-            DateTime start = DateTime.Now;
+            //DateTime start = DateTime.Now;
             //double pi = CalculatePiInt(numTerms);
             //double pi = CalculatePiLong(numTerms);
-            decimal pi = CalculatePiDecimal(numTerms);
-            DateTime end = DateTime.Now;
+            //decimal pi = CalculatePiDecimal(numTerms);
+            //DateTime end = DateTime.Now;
 
-            double seconds = (end - start).TotalSeconds;
+            //double seconds = (end - start).TotalSeconds;
 
-            strPi = pi.ToString();
+            //strPi = pi.ToString();
 
-            Console.WriteLine(strPi);
+            //Console.WriteLine(strPi);
 
-            int digits = strPi.Length - 2;
-            Console.WriteLine(digits.ToString() + " - digits");
-            Console.WriteLine(seconds.ToString() + " - seconds");
+            //int digits = strPi.Length - 2;
+            //Console.WriteLine(digits.ToString() + " - digits");
+            //Console.WriteLine(seconds.ToString() + " - seconds");
 
-            Console.WriteLine("Press any key to exit... ");
+            //Console.WriteLine("Press any key to exit... ");
 
-            Console.ReadKey();
+            //Console.ReadKey();
         }
 
         static void Test1()
         {
             Console.WriteLine("Test #1");
-            Console.WriteLine("Calculate - (Pow((3.75/5), 2)  + 4 + 3/8) - 0.625");
+            Console.WriteLine("Calculate - (Pow((3.75/5), 2)  + 4 + 3/8) - 0.875");
 
             double a = (double)3.75 / (double)5;
-            //double b = Math.Pow(a, 2);
-            double b = a * a;
-            double c = b + 4 + (double)3 / (double)8;
-            double d = c - (double)0.625;
+            double b = Math.Pow(a, 2);
+            //double b = a * a;
+            double c = (double)3 / (double)8;
+            double d = b + 4 + c;
+            double result = d - (double)0.875;
 
-            double answer = 4 + (double)5 / (double)16;
-            double test = 5 / 16;
-
-            Console.WriteLine("Result = " + d);
-            Console.WriteLine("Answer = " + answer);
-            Console.WriteLine("Test = " + test);
+            Console.WriteLine("Result = " + result);
             Console.WriteLine("Press any button to exit...");
             Console.ReadKey();
         }
@@ -75,18 +71,25 @@ namespace Calculations
             Console.WriteLine("Test #2");
             Console.WriteLine("Calculate - (Pow((3.75/5), 2)  + 4 + 3/8) - 7/8");
 
-            double a = (double)3.75 / (double)5;
+            double a = 3.75 / 5;
             //double b = Math.Pow(a, 2);
             double b = a * a;
-            double c = b + 4 + (double)3 / (double)8;
-            double d = c - (double)7 / (double)8;
+            double c = 3 / 8;
+            double d = b + 4 + c;
+            double result = d - 0.875;
 
-            double answer = 4 + (double)1 / (double)16;
-            double test = 1 / 16;
+            Console.WriteLine("Result = " + result);
+            Console.WriteLine("Press any button to exit...");
+            Console.ReadKey();
+        }
 
-            Console.WriteLine("Result = " + d);
-            Console.WriteLine("Answer = " + answer);
-            Console.WriteLine("Test = " + test);
+        static void Test3()
+        {
+            Console.WriteLine("Test #3");
+            Console.WriteLine("Calculate - (Pow((8-3.75/5), 4/9)  + 5.7 + 3/8*7) - 7/8/9");
+            double result = 0;
+
+            Console.WriteLine("Result = " + result);
             Console.WriteLine("Press any button to exit...");
             Console.ReadKey();
         }
