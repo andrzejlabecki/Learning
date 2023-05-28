@@ -26,8 +26,9 @@ namespace Calculations
             int sizeOfDouble = sizeof(double);    // 8 bytes
             int sizeOfBool = sizeof(bool);    // 1 byte
 
-            Test1();
-            Test2();
+            //Test1();
+            //Test2();
+            Test3();
 
             // pi calculation by using the Leibniz formula
             // pi/4 = 1 - 1/3 + 1/5 - 1/7 + 1/9 - 1/11 + ...
@@ -89,9 +90,9 @@ namespace Calculations
             double a = 3.75 / 5;
             //double b = Math.Pow(a, 2);
             double b = a * a;
-            double c = 3/8;
+            double c = 3.0/8.0;
             double d = b + 4 + c;
-            double result = d - 7/8;
+            double result = d - 7.0/(double)8;
 
             Console.WriteLine("Result = " + result);
             Console.WriteLine("Press any button to exit...");
@@ -101,7 +102,7 @@ namespace Calculations
         static void Test3()
         {
             Console.WriteLine("Test #3");
-            Console.WriteLine("Calculate - Pow((8-3.75/5), 4/9)  + 5.7 + 3/8*7 - 7/8/9");
+            Console.WriteLine("Calculate - Pow((8-3.75/5), 4/9)  + 5.7 + (3-2.34)/8*7 - 7/8/(5-2.1)/9");
             double result = 0;
 
             Console.WriteLine("Result = " + result);
