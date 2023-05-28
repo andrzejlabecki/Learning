@@ -95,13 +95,13 @@ namespace Calculator
             textBoxInput.Text += "-";
             isDot = false;
         }
-        private void buttonDevided_Click(object sender, EventArgs e)
+        private void buttonDivide_Click(object sender, EventArgs e)
         {
             operation = "/";
             textBoxInput.Text += "/";
             isDot = false;
         }
-        private void ButtonMulti_Click(object sender, EventArgs e)
+        private void buttonMultiply_Click(object sender, EventArgs e)
         {
             operation = "*";
             textBoxInput.Text += "*";

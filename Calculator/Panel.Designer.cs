@@ -221,6 +221,7 @@
             buttonDivide.TabIndex = 16;
             buttonDivide.Text = "/";
             buttonDivide.UseVisualStyleBackColor = true;
+            buttonDivide.Click += buttonDivide_Click;
             // 
             // buttonEqual
             // 
