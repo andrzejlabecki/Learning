@@ -15,6 +15,17 @@ namespace Calculations
             // '/' divide
             // 'Math.Pow(x, y)' y power of x
 
+            int a = 1;
+            long b = 1;
+            double c = 1;
+
+            int sizeOfInt = sizeof(int);          // 4 bytes
+            int sizeOfLong = sizeof(long);          // 4 bytes
+            int sizeOfChar = sizeof(char);        // 2 bytes
+            int sizeOfFloat = sizeof(float);    // 4 bytes
+            int sizeOfDouble = sizeof(double);    // 8 bytes
+            int sizeOfBool = sizeof(bool);    // 1 byte
+
             Test1();
             Test2();
 
@@ -52,16 +63,20 @@ namespace Calculations
         static void Test1()
         {
             Console.WriteLine("Test #1");
-            Console.WriteLine("Calculate - (Pow((3.75/5), 2)  + 4 + 3/8) - 0.875");
+            Console.WriteLine("Calculate - Pow((3.75/5), 2)  + 4 + 3/8 - 7/8");
 
             double a = (double)3.75 / (double)5;
             double b = Math.Pow(a, 2);
             //double b = a * a;
-            double c = (double)3 / (double)8;
+            double c = (double)3/(double)8;
             double d = b + 4 + c;
-            double result = d - (double)0.875;
+            double e = (double)7/(double)8;
+            double result1 = d - e;
 
-            Console.WriteLine("Result = " + result);
+            double result2 = Math.Pow((double)3.75/(double)5, 2) + (double)4 + (double)3/(double)8 - (double)7/(double)8;
+
+            Console.WriteLine("Result1 = " + result1);
+            Console.WriteLine("Result2 = " + result2);
             Console.WriteLine("Press any button to exit...");
             Console.ReadKey();
         }
@@ -69,14 +84,14 @@ namespace Calculations
         static void Test2()
         {
             Console.WriteLine("Test #2");
-            Console.WriteLine("Calculate - (Pow((3.75/5), 2)  + 4 + 3/8) - 7/8");
+            Console.WriteLine("Calculate - Pow((3.75/5), 2)  + 4 + 3/8 - 7/8");
 
             double a = 3.75 / 5;
             //double b = Math.Pow(a, 2);
             double b = a * a;
-            double c = 3 / 8;
+            double c = 3/8;
             double d = b + 4 + c;
-            double result = d - 0.875;
+            double result = d - 7/8;
 
             Console.WriteLine("Result = " + result);
             Console.WriteLine("Press any button to exit...");
@@ -86,7 +101,7 @@ namespace Calculations
         static void Test3()
         {
             Console.WriteLine("Test #3");
-            Console.WriteLine("Calculate - (Pow((8-3.75/5), 4/9)  + 5.7 + 3/8*7) - 7/8/9");
+            Console.WriteLine("Calculate - Pow((8-3.75/5), 4/9)  + 5.7 + 3/8*7 - 7/8/9");
             double result = 0;
 
             Console.WriteLine("Result = " + result);
