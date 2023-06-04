@@ -15,9 +15,9 @@ namespace Calculations
             // '/' divide
             // 'Math.Pow(x, y)' y power of x
 
-            Test1();
-            Test2();
-
+            //Test1();
+            //Test2();
+            Test3();
             // pi calculation by using the Leibniz formula
             // pi/4 = 1 - 1/3 + 1/5 - 1/7 + 1/9 - 1/11 + ...
 
@@ -72,8 +72,8 @@ namespace Calculations
             Console.WriteLine("Calculate - (Pow((3.75/5), 2)  + 4 + 3/8) - 7/8");
 
             double a = 3.75 / 5;
-            //double b = Math.Pow(a, 2);
-            double b = a * a;
+            double b = Math.Pow(a, 2);
+            //double b = a * a;
             double c = 3 / 8;
             double d = b + 4 + c;
             double result = d - 0.875;
@@ -87,7 +87,15 @@ namespace Calculations
         {
             Console.WriteLine("Test #3");
             Console.WriteLine("Calculate - (Pow((8-3.75/5), 4/9)  + 5.7 + 3/8*7) - 7/8/9");
-            double result = 0;
+            
+            double a = 8 - 3.75;
+            double b = 4 / 9;
+            double c = Math.Pow(a, b);
+            //double c = a * a;
+            double d = 3 / 8 * 7;
+            double e = c + 5.7 + d;
+            double f = 7 / 8 / 9;
+            double result = e - f;
 
             Console.WriteLine("Result = " + result);
             Console.WriteLine("Press any button to exit...");
