@@ -95,14 +95,16 @@ namespace Calculator
             textBoxInput.Text += "-";
             isDot = false;
         }
-
+<<<<<<< HEAD
         private void buttonDivide_Click(object sender, EventArgs e)
         {
             operation = "/";
             textBoxInput.Text += "/";
             isDot = false;
         }
+=======
 
+>>>>>>> fe031120ee42324235880749141404008c89b783
         private void buttonMultiply_Click(object sender, EventArgs e)
         {
             operation = "*";
@@ -149,6 +151,13 @@ namespace Calculator
 
             textBoxInput.Text = string.Empty;
             textBoxResult.Text = string.Empty;
+        }
+
+        private void buttonDivide_Click(object sender, EventArgs e)
+        {
+            operation = "/";
+            textBoxInput.Text += "/";
+            isDot = false;
         }
     }
 }
