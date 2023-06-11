@@ -33,6 +33,7 @@
             //Test4(transactions);
             //Test6(17);
             Test5(numbers);
+            Test7(numbers);
 
             // pi calculation by using the Leibniz formula
             // pi/4 = 1 - 1/3 + 1/5 - 1/7 + 1/9 - 1/11 + ...
