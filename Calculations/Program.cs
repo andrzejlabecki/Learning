@@ -1,11 +1,9 @@
-﻿
-using System;
-using System.Reflection.Metadata;
-
-namespace Calculations
+﻿namespace Calculations
 {
     internal class Program
     {
+        private static object odd;
+
         static void Main(string[] args)
         {
             // Operators
@@ -35,7 +33,8 @@ namespace Calculations
             //Test1();
             //Test2();
             //Test4(transactions);
-            Test6(17);
+            //Test6(17);
+            Test5(numbers);
 
             // pi calculation by using the Leibniz formula
             // pi/4 = 1 - 1/3 + 1/5 - 1/7 + 1/9 - 1/11 + ...
@@ -68,6 +67,16 @@ namespace Calculations
             //Console.ReadKey();
         }
 
+        private static void Test5()
+        {
+            throw new NotImplementedException();
+        }
+
+        private static void Test5(int v)
+        {
+            throw new NotImplementedException();
+        }
+
         static void Test1()
         {
             Console.WriteLine("Test #1");
@@ -76,12 +85,12 @@ namespace Calculations
             double a = (double)3.75 / (double)5;
             double b = Math.Pow(a, 2);
             //double b = a * a;
-            double c = (double)3/(double)8;
+            double c = (double)3 / (double)8;
             double d = b + 4 + c;
-            double e = (double)7/(double)8;
+            double e = (double)7 / (double)8;
             double result1 = d - e;
 
-            double result2 = Math.Pow((double)3.75/(double)5, 2) + (double)4 + (double)3/(double)8 - (double)7/(double)8;
+            double result2 = Math.Pow((double)3.75 / (double)5, 2) + (double)4 + (double)3 / (double)8 - (double)7 / (double)8;
 
             Console.WriteLine("Result1 = " + result1);
             Console.WriteLine("Result2 = " + result2);
@@ -100,7 +109,7 @@ namespace Calculations
             double c = 3 / 8;
             //double b = Math.Pow(a, 2);
             double d = b + 4 + c;
-            double result = d - 7.0/(double)8;
+            double result = d - 7.0 / (double)8;
 
             Console.WriteLine("Result = " + result);
             Console.WriteLine("Press any button to exit...");
@@ -111,7 +120,7 @@ namespace Calculations
         {
             Console.WriteLine("Test #3");
             Console.WriteLine("Calculate - (Pow((8-3.75/5), 4/9)  + 5.7 + 3/8*7) - 7/8/9");
-            
+
             double a = 8 - 3.75;
             double b = 4.0 / 9.0;
             double c = Math.Pow(a, b);
@@ -161,7 +170,9 @@ namespace Calculations
             Console.WriteLine("Test #5");
             Console.WriteLine("Calculate sum of array");
 
-            int odd = 0;
+            for (int i = 0; i < numbers.Length; i += 1)
+
+                int odd = 0;
             int even = 0;
             int total = 0;
 
@@ -245,15 +256,15 @@ namespace Calculations
             {
                 if (positive)
                 {
-                    pi += (decimal)1.0/i;
+                    pi += (decimal)1.0 / i;
                 }
                 else
                 {
-                    pi -= (decimal)1.0/i;
+                    pi -= (decimal)1.0 / i;
                 }
                 positive = !positive;
             }
-            return (decimal)4.0*pi;
+            return (decimal)4.0 * pi;
         }
     }
 }
