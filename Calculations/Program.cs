@@ -2,8 +2,6 @@
 {
     internal class Program
     {
-        private static object odd;
-
         static void Main(string[] args)
         {
             // Operators
@@ -65,16 +63,6 @@
             //Console.WriteLine("Press any key to exit... ");
 
             //Console.ReadKey();
-        }
-
-        private static void Test5()
-        {
-            throw new NotImplementedException();
-        }
-
-        private static void Test5(int v)
-        {
-            throw new NotImplementedException();
         }
 
         static void Test1()
@@ -170,12 +158,22 @@
             Console.WriteLine("Test #5");
             Console.WriteLine("Calculate sum of array");
 
-            for (int i = 0; i < numbers.Length; i += 1)
-
-                int odd = 0;
+            int odd = 0;
             int even = 0;
             int total = 0;
 
+            for (int i = 0; i < numbers.Length; i += 1)
+            {
+                if (IsEven(numbers[i]))
+                {
+                    even += numbers[i];
+                    //even = even + numbers[i];
+                }
+                else
+                    odd += numbers[i];
+            }
+
+            total = even + odd;
 
             Console.WriteLine("Odds = " + odd.ToString());
             Console.WriteLine("Evens = " + even.ToString());
@@ -198,6 +196,22 @@
                 Console.WriteLine("The number is odd.");
             }
 
+            Console.WriteLine("Press any button to exit...");
+            Console.ReadKey();
+        }
+
+        static void Test7(int [] numbers)
+        {
+            Console.WriteLine("Test #7");
+            Console.WriteLine("Calculate sum of array");
+
+            int total = 0;
+
+            for (int i = 0; i < numbers.Length; i += 1)
+            {
+            }
+
+            Console.WriteLine("Total " + total.ToString());
             Console.WriteLine("Press any button to exit...");
             Console.ReadKey();
         }
